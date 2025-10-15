@@ -2,6 +2,7 @@ import type { SearchingAlgorithm } from "../../types/algorithms"
 import { SearchingAlgorithms } from "../../enums/SearchingAlgorithms"
 import { LinearSearch } from "./linearSearch"
 import { BinarySearch } from "./binarySearch"
+import { JumpSearch } from "./jumpSearch"
 
 /**
  * Factory class for creating searching algorithm instances
@@ -11,6 +12,7 @@ export class SearchingAlgorithmFactory {
   private static algorithms: Map<SearchingAlgorithms, SearchingAlgorithm> = new Map([
     [SearchingAlgorithms.LinearSearch, new LinearSearch()],
     [SearchingAlgorithms.BinarySearch, new BinarySearch()],
+    [SearchingAlgorithms.JumpSearch, new JumpSearch()],
   ])
 
   /**
